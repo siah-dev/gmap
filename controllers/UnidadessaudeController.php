@@ -63,9 +63,13 @@ class UnidadessaudeController extends Controller
     {
         $model = new UnidadesSaude();
         if($model->load(Yii::$app->request->post())){
-          $model->urlCnes = 'http://cnes.datasus.gov.br/Exibe_Ficha_Estabelecimento.asp?VCo_Unidade='+(string)substr($model->cod_cidade,0,strlen($model->cod_cidade)-1)+(string)$model->cnes;
+          $model->urlCnes = 'http://cnes.datasus.gov.br/Exibe_Ficha_Estabelecimento.asp?VCo_Unidade='.(string)substr($model->cod_cidade,0,strlen($model->cod_cidade)-1).(string)$model->cnes;
           if ($model->save()) {
               return $this->redirect(['view', 'id' => $model->id]);
+          }else{
+            return $this->render('create', [
+                'model' => $model,
+            ]);
           }
         } else {
           return $this->render('create', [
