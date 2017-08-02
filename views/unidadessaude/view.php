@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome_hospital',
             'descricao:ntext',
             'crs0.nome:ntext:CRS',
-            'crr0.nome:ntext:CRR',
+            'crr0.regionais:ntext:CRR',
             'latitude',
             'longitude',
             'cnes',

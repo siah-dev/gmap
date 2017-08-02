@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label'=>'Cidade'
             ],
             'nome_hospital',
-            'descricao:ntext',
             [
                 'attribute' => 'crs_n',
                 'value' => 'crs0.nome',
