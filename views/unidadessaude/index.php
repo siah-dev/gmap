@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'id',
+            'cnes',
             [
                 'attribute' => 'cidade_n',
                 'value' => 'codCidade.nome',
