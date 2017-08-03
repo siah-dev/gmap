@@ -8,6 +8,7 @@ use app\models\UnidadesSaudeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * UnidadessaudeController implements the CRUD actions for UnidadesSaude model.
@@ -35,7 +36,14 @@ class UnidadessaudeController extends Controller
           ],
         ];
     }
-
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+        ];
+    }
     /**
      * Lists all UnidadesSaude models.
      * @return mixed
