@@ -51,12 +51,12 @@ class UnidadesSaudeSearch extends UnidadesSaude
             'query' => $query,
         ]);
         $dataProvider->sort->attributes['crs_n'] = [
-            'asc' => ['crs0.nome' => SORT_ASC],
-            'desc' => ['crs0.nome' => SORT_DESC],
+            'asc' => ['regioes_saude.nome' => SORT_ASC],
+            'desc' => ['regioes_saude.nome' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['cidade_n'] = [
-            'asc' => ['codCidade.nome' => SORT_ASC],
-            'desc' => ['codCidade.nome' => SORT_DESC],
+            'asc' => ['cidade.nome' => SORT_ASC],
+            'desc' => ['cidade.nome' => SORT_DESC],
         ];
         $this->load($params);
 

@@ -4811,3 +4811,121 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1501782428.6101
     'REQUEST_TIME' => 1501782428
 ]
+2017-08-03 20:31:17 [127.0.0.1][2][j5ujp4klkq1se92aqk8cgdl5v2][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'crs0.nome' in 'order clause' in /var/www/html/gmap/vendor/yiisoft/yii2/db/Command.php:915
+Stack trace:
+#0 /var/www/html/gmap/vendor/yiisoft/yii2/db/Command.php(915): PDOStatement->execute()
+#1 /var/www/html/gmap/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/gmap/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#3 /var/www/html/gmap/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#4 /var/www/html/gmap/models/UnidadesSaudeQuery.php(24): yii\db\ActiveQuery->all(NULL)
+#5 /var/www/html/gmap/vendor/yiisoft/yii2/data/ActiveDataProvider.php(116): app\models\UnidadesSaudeQuery->all(NULL)
+#6 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#7 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#8 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#9 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(189): yii\data\BaseDataProvider->getCount()
+#10 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(157): yii\widgets\BaseListView->renderSummary()
+#11 /var/www/html/gmap/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{summary}')
+#12 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(134): yii\grid\GridView->renderSection('{summary}')
+#13 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#14 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(137): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#15 /var/www/html/gmap/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#16 /var/www/html/gmap/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#17 /var/www/html/gmap/views/unidadessaude/index.php(26): yii\base\Widget::widget(Array)
+#18 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/g...')
+#19 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/g...', '[<span class="s...')
+#20 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/g...', Array, Object(app\controllers\UnidadessaudeController))
+#21 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\UnidadessaudeController))
+#22 /var/www/html/gmap/controllers/UnidadessaudeController.php(60): yii\base\Controller->render('index', Array)
+#23 [internal function]: app\controllers\UnidadessaudeController->actionIndex()
+#24 /var/www/html/gmap/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#25 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#26 /var/www/html/gmap/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#27 /var/www/html/gmap/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('unidadessaude/i...', Array)
+#28 /var/www/html/gmap/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 /var/www/html/gmap/web/index.php(12): yii\base\Application->run()
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'crs0.nome' in 'order clause'
+The SQL being executed was: SELECT `unidades_saude`.* FROM `unidades_saude` LEFT JOIN `regioes_saude` ON `unidades_saude`.`crs` = `regioes_saude`.`id` LEFT JOIN `cidade` ON `unidades_saude`.`cod_cidade` = `cidade`.`cod_ibge` ORDER BY `crs0`.`nome` LIMIT 20 in /var/www/html/gmap/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/gmap/vendor/yiisoft/yii2/db/Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT `unidade...')
+#1 /var/www/html/gmap/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/gmap/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#3 /var/www/html/gmap/vendor/yiisoft/yii2/db/ActiveQuery.php(135): yii\db\Query->all(NULL)
+#4 /var/www/html/gmap/models/UnidadesSaudeQuery.php(24): yii\db\ActiveQuery->all(NULL)
+#5 /var/www/html/gmap/vendor/yiisoft/yii2/data/ActiveDataProvider.php(116): app\models\UnidadesSaudeQuery->all(NULL)
+#6 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#7 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#8 /var/www/html/gmap/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#9 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(189): yii\data\BaseDataProvider->getCount()
+#10 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(157): yii\widgets\BaseListView->renderSummary()
+#11 /var/www/html/gmap/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{summary}')
+#12 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(134): yii\grid\GridView->renderSection('{summary}')
+#13 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#14 /var/www/html/gmap/vendor/yiisoft/yii2/widgets/BaseListView.php(137): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#15 /var/www/html/gmap/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#16 /var/www/html/gmap/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#17 /var/www/html/gmap/views/unidadessaude/index.php(26): yii\base\Widget::widget(Array)
+#18 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/g...')
+#19 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/g...', '[<span class="s...')
+#20 /var/www/html/gmap/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/g...', Array, Object(app\controllers\UnidadessaudeController))
+#21 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\UnidadessaudeController))
+#22 /var/www/html/gmap/controllers/UnidadessaudeController.php(60): yii\base\Controller->render('index', Array)
+#23 [internal function]: app\controllers\UnidadessaudeController->actionIndex()
+#24 /var/www/html/gmap/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#25 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#26 /var/www/html/gmap/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#27 /var/www/html/gmap/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('unidadessaude/i...', Array)
+#28 /var/www/html/gmap/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 /var/www/html/gmap/web/index.php(12): yii\base\Application->run()
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'crs0.nome' in 'order clause'
+)
+
+2017-08-03 20:31:16 [127.0.0.1][2][j5ujp4klkq1se92aqk8cgdl5v2][info][application] $_GET = [
+    'sort' => 'crs_n'
+]
+
+$_COOKIE = [
+    '_identity' => 'e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a:2:{i:0;s:9:\"_identity\";i:1;s:214:\"[2,\"f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5\",2592000]\";}'
+    'PHPSESSID' => 'j5ujp4klkq1se92aqk8cgdl5v2'
+    '_csrf' => 'a2c342c184393a152b9ec26f3cbabd802cf391d40fbeebafcc635deb81635276a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"´¥: ›h†Àd<¬Ä÷ø-XlPKÍÜŸõ1?HžQÒ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/gmap/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37342'
+    'SERVER_SOFTWARE' => 'PHP 7.0.18-0ubuntu0.16.04.1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/unidadessaude/index?sort=crs_n'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/gmap/web/index.php'
+    'PATH_INFO' => '/unidadessaude/index'
+    'PHP_SELF' => '/index.php/unidadessaude/index'
+    'QUERY_STRING' => 'sort=crs_n'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/unidadessaude/index'
+    'HTTP_COOKIE' => '_identity=e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A214%3A%22%5B2%2C%22f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5%22%2C2592000%5D%22%3B%7D; PHPSESSID=j5ujp4klkq1se92aqk8cgdl5v2; _csrf=a2c342c184393a152b9ec26f3cbabd802cf391d40fbeebafcc635deb81635276a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%A5%3A+%9Bh%86%C0d%3C%AC%C4%F7%F8-Xl%18PK%CD%03%DC%9F%F51%3FH%9EQ%D2%03%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1501792276.8973
+    'REQUEST_TIME' => 1501792276
+]
