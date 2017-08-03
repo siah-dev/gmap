@@ -21,6 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'data' => [
                 'confirm' => Yii::t('app', 'Você realmente deseja excluir este item?'),
                 'method' => 'post',
+                'params' => ['_csrf'=> Yii::$app->request->getCsrfToken()]
             ],
         ]) ?>
     </p>

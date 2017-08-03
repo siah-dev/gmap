@@ -4705,3 +4705,109 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1499283168.6426
     'REQUEST_TIME' => 1499283168
 ]
+2017-08-03 17:47:03 [127.0.0.1][2][05bhq3r8o403pu5gm8tmhdssi0][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in /var/www/html/gmap/vendor/yiisoft/yii2/web/Controller.php:166
+Stack trace:
+#0 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/gmap/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('delete', Array)
+#2 /var/www/html/gmap/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('unidadessaude/d...', Array)
+#3 /var/www/html/gmap/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/gmap/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2017-08-03 17:47:03 [127.0.0.1][2][05bhq3r8o403pu5gm8tmhdssi0][info][application] $_GET = [
+    'id' => '359'
+]
+
+$_COOKIE = [
+    '_identity' => 'e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a:2:{i:0;s:9:\"_identity\";i:1;s:214:\"[2,\"f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5\",2592000]\";}'
+    'PHPSESSID' => '05bhq3r8o403pu5gm8tmhdssi0'
+    '_csrf' => 'bb9f01d2814d8a303a0fc21466649e4dba2b079528577d5538cc0ca2be0bccd3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ºaØu?P²º7eBSëØ¹´lèU{¯GH‚9èyÁ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/gmap/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35214'
+    'SERVER_SOFTWARE' => 'PHP 7.0.18-0ubuntu0.16.04.1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/unidadessaude/delete/359'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/gmap/web/index.php'
+    'PATH_INFO' => '/unidadessaude/delete/359'
+    'PHP_SELF' => '/index.php/unidadessaude/delete/359'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/unidadessaude/index?page=3'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_COOKIE' => '_identity=e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A214%3A%22%5B2%2C%22f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5%22%2C2592000%5D%22%3B%7D; PHPSESSID=05bhq3r8o403pu5gm8tmhdssi0; _csrf=bb9f01d2814d8a303a0fc21466649e4dba2b079528577d5538cc0ca2be0bccd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%1D%BAa%D8u%3FP%B2%BA7eBS%EB%D8%07%B9%B4%1Bl%E8U%7B%AF%0DGH%829%E8y%C1%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1501782423.0343
+    'REQUEST_TIME' => 1501782423
+]
+2017-08-03 17:47:08 [127.0.0.1][2][05bhq3r8o403pu5gm8tmhdssi0][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This url can only handle the following request methods: POST. in /var/www/html/gmap/vendor/yiisoft/yii2/filters/VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /var/www/html/gmap/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /var/www/html/gmap/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /var/www/html/gmap/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/html/gmap/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('delete', Array)
+#6 /var/www/html/gmap/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('unidadessaude/d...', Array)
+#7 /var/www/html/gmap/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/gmap/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2017-08-03 17:47:08 [127.0.0.1][2][05bhq3r8o403pu5gm8tmhdssi0][info][application] $_GET = [
+    'id' => '359'
+]
+
+$_COOKIE = [
+    '_identity' => 'e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a:2:{i:0;s:9:\"_identity\";i:1;s:214:\"[2,\"f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5\",2592000]\";}'
+    'PHPSESSID' => '05bhq3r8o403pu5gm8tmhdssi0'
+    '_csrf' => 'bb9f01d2814d8a303a0fc21466649e4dba2b079528577d5538cc0ca2be0bccd3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ºaØu?P²º7eBSëØ¹´lèU{¯GH‚9èyÁ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/gmap/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35288'
+    'SERVER_SOFTWARE' => 'PHP 7.0.18-0ubuntu0.16.04.1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/unidadessaude/delete/359'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/gmap/web/index.php'
+    'PATH_INFO' => '/unidadessaude/delete/359'
+    'PHP_SELF' => '/index.php/unidadessaude/delete/359'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/unidadessaude/359'
+    'HTTP_COOKIE' => '_identity=e157a84b97c662cccd559d92d4ed4d731d431c7c4d122ae537f2c26efc2f6724a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A214%3A%22%5B2%2C%22f3787c16f5b9d362d8be6bc04a44ee2e15082816f7e4d775aa75c6f7fb97a06896053273566d49f6e99a8f8b0a57b1008451ab3f145408c5762ca67e76753f16c00b715820aa36f2620d2bce31e10c7a6b13a5d0aa4db29dbb4c0e7d6acc474c638837b5%22%2C2592000%5D%22%3B%7D; PHPSESSID=05bhq3r8o403pu5gm8tmhdssi0; _csrf=bb9f01d2814d8a303a0fc21466649e4dba2b079528577d5538cc0ca2be0bccd3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%1D%BAa%D8u%3FP%B2%BA7eBS%EB%D8%07%B9%B4%1Bl%E8U%7B%AF%0DGH%829%E8y%C1%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1501782428.6101
+    'REQUEST_TIME' => 1501782428
+]

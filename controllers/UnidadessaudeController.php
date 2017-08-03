@@ -16,15 +16,17 @@ use yii\filters\AccessControl;
 class UnidadessaudeController extends Controller
 {
     public $layout = 'painel';
+    public $enableCsrfValidation = false;
+
     public function behaviors()
     {
         return [
-            /*'verbs' => [
+            'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
-            ],*/
+            ],
             'access' => [
               'class' => AccessControl::className(),
               'rules' => [
