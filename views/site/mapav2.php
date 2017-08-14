@@ -117,4 +117,4 @@ $this->registerCss(".bs-example{
 $this->registerJs("$('#initMapa').click(handleAjaxLink);", \yii\web\View::POS_READY);
 ?>
         <!-- Maps API Javascript -->
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA9KLznFqLrz_-TZYYRwzOyosA7js5L4bs"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAMW2sDZCk6Zt0bWWLEeIbveNZeMos-mBw"></script>
